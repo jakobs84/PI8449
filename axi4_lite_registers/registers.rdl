@@ -1,0 +1,221 @@
+addrmap registers {
+    name = "AES Registers";
+    desc = "Register description of AES Implementation";
+
+    default regwidth = 32;
+    default sw = rw;
+    default hw = r;
+
+   
+    reg {
+        name = "KEY 0";
+
+        field {
+            hw   = r;
+            sw   = rw;
+            fieldwidth = 32;
+            desc = "KEY 31:0";
+        } DATA[31:0] = 0;
+    } KEY_0 @ 0x0;
+    
+    reg {
+        name = "KEY 1";
+
+        field {
+            hw   = r;
+            sw   = rw;
+            fieldwidth = 32;
+            desc = "KEY 63:32";
+        } DATA[31:0] = 0;
+    } KEY_1 @ 0x4;
+    
+    reg {
+        name = "KEY 2";
+
+        field {
+            hw   = r;
+            sw   = rw;
+            fieldwidth = 32;
+            desc = "KEY 95:64";
+        } DATA[31:0] = 0;
+    } KEY_2 @ 0x8;
+    
+    reg {
+        name = "KEY 3";
+
+        field {
+            hw   = r;
+            sw   = rw;
+            fieldwidth = 32;
+            desc = "KEY 127:96";
+        } DATA[31:0] = 0;
+    } KEY_3 @ 0xC;
+
+
+
+
+    reg {
+        name = "Input TEXT 0";
+
+        field {
+            hw   = r;
+            sw   = rw;
+            fieldwidth = 32;
+            desc = "Input text 31:0";
+        } DATA[31:0] = 0;
+    } I_TEXT_0 @ 0x10;
+    
+    reg {
+        name = "Input TEXT 1";
+
+        field {
+            hw   = r;
+            sw   = rw;
+            fieldwidth = 32;
+            desc = "Input text 63:32";
+        } DATA[31:0] = 0;
+    } I_TEXT_1 @ 0x14;
+    
+    reg {
+        name = "Input TEXT 2";
+
+        field {
+            hw   = r;
+            sw   = rw;
+            fieldwidth = 32;
+            desc = "Input text 95:64";
+        } DATA[31:0] = 0;
+    } I_TEXT_2 @ 0x18;
+    
+    reg {
+        name = "Input TEXT 3";
+
+        field {
+            hw   = r;
+            sw   = rw;
+            fieldwidth = 32;
+            desc = "Input text 127:96";
+        } DATA[31:0] = 0;
+    } I_TEXT_3 @ 0x1C;
+
+
+
+    
+    reg {
+        name = "ENCRYPTED 0";
+
+        field {
+            hw   = w;
+            sw   = r;
+            fieldwidth = 32;
+            desc = "ENCRYPTED 31:0";
+        } DATA[31:0] = 0;
+    } ENCRYPTED_0 @ 0x20;
+    
+    reg {
+        name = "ENCRYPTED 1";
+
+        field {
+            hw   = w;
+            sw   = r;
+            fieldwidth = 32;
+            desc = "ENCRYPTED 63:32";
+        } DATA[31:0] = 0;
+    } ENCRYPTED_1 @ 0x24;
+    
+    reg {
+        name = "ENCRYPTED 2";
+
+        field {
+            hw   = w;
+            sw   = r;
+            fieldwidth = 32;
+            desc = "ENCRYPTED 95:64";
+        } DATA[31:0] = 0;
+    } ENCRYPTED_2 @ 0x28;
+    
+    reg {
+        name = "ENCRYPTED 3";
+
+        field {
+            hw   = w;
+            sw   = r;
+            fieldwidth = 32;
+            desc = "ENCRYPTED 127:96";
+        } DATA[31:0] = 0;
+    } ENCRYPTED_3 @ 0x2C;
+
+
+    
+    reg {
+        name = "DECRYPTED 0";
+
+        field {
+            hw   = w;
+            sw   = r;
+            fieldwidth = 32;
+            desc = "DECRYPTED 31:0";
+        } DATA[31:0] = 0;
+    } DECRYPTED_0 @ 0x30;
+    
+    reg {
+        name = "DECRYPTED 1";
+
+        field {
+            hw   = w;
+            sw   = r;
+            fieldwidth = 32;
+            desc = "DECRYPTED 63:32";
+        } DATA[31:0] = 0;
+    } DECRYPTED_1 @ 0x34;
+    
+    reg {
+        name = "DECRYPTED 2";
+
+        field {
+            hw   = w;
+            sw   = r;
+            fieldwidth = 32;
+            desc = "DECRYPTED 95:64";
+        } DATA[31:0] = 0;
+    } DECRYPTED_2 @ 0x38;
+    
+    reg {
+        name = "DECRYPTED 3";
+
+        field {
+            hw   = w;
+            sw   = r;
+            fieldwidth = 32;
+            desc = "DECRYPTED 127:96";
+        } DATA[31:0] = 0;
+    } DECRYPTED_3 @ 0x3C;
+
+
+
+    reg {
+        name = "SYSTEM ID";
+
+        field {
+            sw   = r;
+            hw   = na;
+            desc = "System ID FIRST";
+        } FIRST[15:0] = 0x1234;
+
+        field {
+            sw   = r;
+            hw   = na;
+            desc = "System ID SECOND";
+        } SECOND[31:16] = 0xABCD;
+    } SYSTEM_ID @ 0x40;
+
+   
+
+
+
+
+
+
+
+
+};

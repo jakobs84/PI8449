@@ -1,0 +1,18 @@
+Instalowanie PIP
+sudo apt install python3-pip
+sudo python3 -m pip install peakrdl-regblock peakrdl-cheader peakrdl
+
+
+Generowanie Verilog'a z pliku RDL: 
+peakrdl regblock registers.rdl -o rdl/ --cpuif axi4-lite-flat
+peakrdl c-header registers.rdl -o rdl/eas.h
+
+
+Generowanie pliku RBF (przejsc do katalogu output_files)
+quartus_cpf -o bitstream_compression=on -c soc_system.sof soc_system.rbf
+
+
+
+jambrozi@bmatwiej-desk:~/soc_system_v4a/axi4_lite_registers$ vsim -c -do ./top.do 
+
+ 

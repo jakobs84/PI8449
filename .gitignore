@@ -1,0 +1,13 @@
+axi4_lite_registers/axi_lite/*
+axi4_lite_registers/work/*
+axi4_lite_registers/svunit_base/*
+db/*
+incremental_db/*
+
+//c5_pin_model_dump.txt
+//hps.qsys
+//hps.sopcinfo
+//soc_system.sdc
+//soc_system.qsf
+//stp1.stp
+//axi4_lite_registers/top.do
