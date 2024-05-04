@@ -32,3 +32,9 @@ print("Text         (hex):", text_hex)
 print("Key          (hex):", key_hex)
 print("Ciphertext   (hex):", ciphertext_hex)
 print("Decrypted    (hex):", decrypted_text_hex)
+
+# Porównanie oryginalnego tekstu z odszyfrowanym tekstem
+if text_hex == decrypted_text_hex:
+    print("Deszyfrowanie zakończone sukcesem: tekst wejściowy jest identyczny z tekstem odszyfrowanym.")
+else:
+    print("Deszyfrowanie nieudane: tekst wejściowy różni się od tekstu odszyfrowanego.")
